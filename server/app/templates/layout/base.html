@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mango</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static', filename='styles.css') }}"
+        />
+        
+    </head>
+
+    <body>
+        <div id="app">
+
+            <header>Header</header>
+            <main id="content">
+                {% block main %}
+
+                {% endblock main %}
+            </main>
+            <footer>Footer</footer>
+        </div>
+    </body>
+
+    <!-- <script src="https://unpkg.com/htmx.org@1.9.12"></script> -->
+    <script src="{{ url_for('static', filename='lib/htmx.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='scripts/editor.js')}}"></script>
+</html>
